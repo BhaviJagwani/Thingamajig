@@ -1,0 +1,18 @@
+import serial
+
+ser= serial.Serial('/dev/ttyUSB0', 9600)
+
+
+while True:
+	RFID = ser.read(48)
+	print RFID
+	#ser.flushInput()
+
+ser.close()
+
+# a: 48524848565369685656695
+# b: 48524848577065577048675
+
+#485248485653696856566952
+#485248485653696856566952
+#485248485770655770486750
